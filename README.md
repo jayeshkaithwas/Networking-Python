@@ -13,6 +13,7 @@ This repository contains Python scripts related to networking, demonstrating var
 - [Packet Sniffer (IP Header Decoder)](#7-sniffer_ip_header_decoderpy)
 - [TCP Proxy](#8-proxypy)
 - [Netcat Clone](#9-netcatpy)
+- [Traceroute Script](#10-traceroutepy)
 
 ## Scripts
 
@@ -306,3 +307,63 @@ A Python-based Netcat clone that:
 - Ensure proper firewall settings to allow communication.
 
 ---
+
+Here's the README section for `traceroute.py`:  
+
+---
+
+### 10. `traceroute.py`
+
+A Python script that replicates the functionality of the `traceroute` network diagnostic tool:
+- Determines the route packets take to a specified destination.
+- Reports the IP address, hostname, and round-trip time (RTT) for each hop along the path.
+
+#### Code Highlights:
+- Uses `socket` for sending and receiving packets.
+- Implements a `create_socket` function to configure ICMP and UDP sockets with varying TTL values.
+- Calculates RTT for each hop and handles host resolution.
+- Provides an option to save traceroute results to a file.
+
+#### How to Use:
+1. Run the script:
+   ```bash
+   python traceroute.py
+   ```
+2. Enter the required parameters when prompted:
+   - **Destination**: Hostname or IP address of the target.
+   - **Maximum Hops**: Maximum number of hops to trace (default is 30).
+   - **Timeout**: Timeout in seconds for each hop (default is 2 seconds).
+
+3. Example Input:
+   ```
+   Enter destination host/IP: google.com
+   Enter maximum hops (default 30): 20
+   Enter timeout in seconds (default 2): 1
+   ```
+
+4. Example Output:
+   ```
+   Traceroute to google.com
+   Hop     IP                  Hostname             Time
+   ------------------------------------------------------------
+   1       192.168.1.1         myrouter.home        1.23ms
+   2       10.0.0.1            -                    2.45ms
+   ...
+   10      142.250.72.14       fra15s30-in-f14.1e100.net  20.31ms
+   ```
+
+5. Optionally, save the results to a file:
+   - When prompted, type `y` and provide a filename, or leave it blank to auto-generate.
+
+#### Features:
+- Displays hop-by-hop details with RTT.
+- Resolves IP addresses to hostnames when possible.
+- Saves results to a timestamped text file for later reference.
+
+#### Notes:
+- Requires administrative/root privileges to run.
+- May behave differently depending on network and operating system configurations.
+
+---
+
+More Scripts are Comming soon!!!
