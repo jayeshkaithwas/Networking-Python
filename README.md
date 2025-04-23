@@ -14,6 +14,7 @@ This repository contains Python scripts related to networking, demonstrating var
 - [TCP Proxy](#8-proxypy)
 - [Netcat Clone](#9-netcatpy)
 - [Traceroute Script](#10-traceroutepy)
+- [Email Validator](#11-email_validatorpy)
 
 ## Scripts
 
@@ -364,6 +365,38 @@ A Python script that replicates the functionality of the `traceroute` network di
 - Requires administrative/root privileges to run.
 - May behave differently depending on network and operating system configurations.
 
+---
+
+### 11. `email_validator.py`
+
+A Python script that checks the validity of an email address through multiple verification steps. This script helps ensure that an email address is properly formatted, belongs to a valid domain, and actually exists.
+
+#### Features
+- **Email Format Validation**: Ensures the email address is in the correct format.
+- **Domain Validation**: Verifies that the domain name is valid and not from a disposable email provider.
+- **MX Record Check**: Retrieves and checks the domain's MX (Mail Exchange) records.
+- **Mailbox Verification**: Attempts to connect to the email server to verify the existence of the email address.
+   
+#### How It Works
+
+The script follows these steps to validate an email address:
+
+1. **Check for Email Format**: Uses a regular expression to ensure the email address is formatted correctly.
+2. **Validate Domain**: Checks if the domain name is valid and not from a known disposable email provider.
+3. **Check MX Records**: Resolves the MX records for the domain.
+4. **Simulate Email Delivery**: Connects to the email server and simulates sending an email to verify if the email address exists.
+
+#### Example
+
+   ```bash
+   python email_validator.py user@example.com
+   ```
+
+   Output:
+
+   ```
+   Valid email address
+   ```
 ---
 
 More Scripts are Comming soon!!!
