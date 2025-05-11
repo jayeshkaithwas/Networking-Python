@@ -399,4 +399,21 @@ The script follows these steps to validate an email address:
    ```
 ---
 
+### 12. `conv.py`
+
+A Python script to convert string to reversed hex.
+
+#### Example
+
+   ```bash
+   python conv.py /bin/sh
+   ```
+
+   Output:
+
+   ```
+   0x68732f
+   0x6e69622f
+   ```
+---
 More Scripts are Comming soon!!!
