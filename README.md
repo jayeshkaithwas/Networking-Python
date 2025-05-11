@@ -15,6 +15,7 @@ This repository contains Python scripts related to networking, demonstrating var
 - [Netcat Clone](#9-netcatpy)
 - [Traceroute Script](#10-traceroutepy)
 - [Email Validator](#11-email_validatorpy)
+- [String to Reversed Hex Converter](#12-convpy)
 
 ## Scripts
 
