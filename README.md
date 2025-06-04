@@ -16,6 +16,7 @@ This repository contains Python scripts related to networking, demonstrating var
 - [Traceroute Script](#10-traceroutepy)
 - [Email Validator](#11-email_validatorpy)
 - [String to Reversed Hex Converter](#12-convpy)
+- [Subdomain Finder using crt.sh](#13-crtpy)
 
 ## Scripts
 
@@ -377,7 +378,7 @@ A Python script that checks the validity of an email address through multiple ve
 - **Domain Validation**: Verifies that the domain name is valid and not from a disposable email provider.
 - **MX Record Check**: Retrieves and checks the domain's MX (Mail Exchange) records.
 - **Mailbox Verification**: Attempts to connect to the email server to verify the existence of the email address.
-   
+
 #### How It Works
 
 The script follows these steps to validate an email address:
@@ -417,4 +418,51 @@ A Python script to convert string to reversed hex.
    0x6e69622f
    ```
 ---
+
+### 13. `crt.py`
+
+A simple Python script uses the `crt.sh` API to **find unique subdomains** for any given domain.
+
+#### Features
+
+✅ Queries `crt.sh` for any subdomains of your target domain.
+✅ Handles subdomains returned in the `name_value` field.
+✅ Supports **timeout configuration** for the request.
+✅ Optionally **saves the output** to a file.
+✅ Outputs a **clean, sorted list** of subdomains.
+
+#### Usage
+
+   ```bash
+   python crt.py
+   ```
+
+**Example workflow:**
+
+1. Enter the target domain when prompted.
+2. Specify a timeout in seconds (or press Enter for the default of 10 seconds).
+3. View the unique subdomains found.
+4. Choose whether to save them to a file.
+
+#### Example Output
+
+   ```plaintext
+   Enter the domain (e.g., example.com): example.com
+   Enter timeout in seconds (default: 10):
+   [*] Fetching subdomains for: example.com with timeout 10s
+   
+   [+] Found 8 unique subdomains:
+   example.com
+   www.example.com
+   mail.example.com
+   dev.example.com
+   ...
+   
+   Do you want to save the results to a file? (y/n): y
+   Enter filename (e.g., subdomains.txt): example_subdomains.txt
+   [+] Subdomains saved to: example_subdomains.txt
+   ```
+
+---
 More Scripts are Comming soon!!!
+
