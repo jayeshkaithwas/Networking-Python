@@ -425,11 +425,11 @@ A simple Python script uses the `crt.sh` API to **find unique subdomains** for a
 
 #### Features
 
-✅ Queries `crt.sh` for any subdomains of your target domain.
-✅ Handles subdomains returned in the `name_value` field.
-✅ Supports **timeout configuration** for the request.
-✅ Optionally **saves the output** to a file.
-✅ Outputs a **clean, sorted list** of subdomains.
+- Queries `crt.sh` for any subdomains of your target domain.
+- Handles subdomains returned in the `name_value` field.
+- Supports **timeout configuration** for the request.
+- Optionally **saves the output** to a file.
+- Outputs a **clean, sorted list** of subdomains.
 
 #### Usage
 
